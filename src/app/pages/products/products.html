@@ -1,0 +1,25 @@
+
+<section>
+
+@for(p of products ; track $index){
+    <div class="card">
+        <div class="img">
+            <img [src]="p.image" alt="">
+        </div>
+        <h2>{{p.name}}</h2>
+        <div class="price">
+            <p>{{p.price}}</p>
+            @if(p.avalible){
+                <button>comprar</button>
+            } @else {
+                <button class="disable" disabled>comprar</button>
+            }
+        </div>
+    </div>
+}
+
+
+</section>
+
+
+
